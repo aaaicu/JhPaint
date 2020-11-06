@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="CustomPaintView">
+        <attr name="Palette" format="boolean" />
+    </declare-styleable>
+</resources>
