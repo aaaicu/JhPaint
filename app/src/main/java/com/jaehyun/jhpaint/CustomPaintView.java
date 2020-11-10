@@ -13,9 +13,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-/**
- * TODO: document your custom view class.
- */
 public class CustomPaintView extends View {
     private boolean mPalette;
     private Paint mPaint;
@@ -76,8 +73,6 @@ public class CustomPaintView extends View {
         mPaint.setColor(Color.RED);
         mPaint.setStrokeWidth(10);
 
-
-//
 //        // Update TextPaint and text measurements from attributes
 //        invalidateTextPaintAndMeasurements();
     }
@@ -122,7 +117,7 @@ public class CustomPaintView extends View {
         mBitmap = Bitmap.createBitmap(w,h, Bitmap.Config.ARGB_8888);
         mCanvas = new Canvas();
         mCanvas.setBitmap(mBitmap);
-        mCanvas.drawColor(Color.WHITE);
+        mCanvas.drawColor(Color.TRANSPARENT);
     }
 
     @Override
@@ -131,11 +126,11 @@ public class CustomPaintView extends View {
         float y = event.getY();
 
         if(event.getAction() == MotionEvent.ACTION_DOWN){
-            Log.d("test", "터치다운");
+//            Log.d("test", "터치다운");
             oldX = x; oldY = y;
 
         } else if(event.getAction() == MotionEvent.ACTION_MOVE){
-            Log.d("test", "터치이동" +event.getY() + ","+ event.getY());
+//            Log.d("test", "터치이동" +event.getY() + ","+ event.getY());
             if(oldX != -1)
             {
                 mCanvas.drawLine(oldX,oldY,x,y,mPaint);
@@ -143,7 +138,7 @@ public class CustomPaintView extends View {
                 oldX = x; oldY = y;
             };
         } else if(event.getAction() == MotionEvent.ACTION_UP){
-            Log.d("test", "터치업");
+//            Log.d("test", "터치업");
             if(oldX != -1){
                 mCanvas.drawLine(oldX,oldY,x,y,mPaint);
             }
