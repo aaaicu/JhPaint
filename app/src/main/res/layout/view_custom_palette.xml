@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:background="@color/design_default_color_primary"
+        android:background="@color/design_default_color_on_primary"
         android:id="@+id/recyclerView"
         android:layout_width="150dp"
         android:layout_height="50dp"

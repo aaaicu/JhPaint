@@ -24,6 +24,7 @@ public class CustomPaintView extends View {
     private float mTextWidth;
     private float mTextHeight;
 
+
     public CustomPaintView(Context context) {
         super(context);
         init(null, 0);
